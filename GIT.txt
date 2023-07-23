@@ -1,0 +1,26 @@
+how to push code on github?
+----------------------
+**With Commond Line Interface(CLI)
+1.git status
+2.git add .
+3.git status
+4.git commit -m "done our code"
+5.git push origin branch_name
+
+**Without CLI Using GUI
+
+●	ReactJS
+●	TypeScript
+●	JavaScript
+●	Redux	●	Jest
+●	HTML
+●	SCSS
+●	Node	●	CSS
+●	Storybook
+●	Git
+●	AWS
+
+
+A result-oriented professional with nearly ~2 years of experience in designing & developing applications, managing projects, and coordinating with clients targeting assignments as a Front-End Developer.
+GITHUB:
+https://github.com/kuldeep0753/E-commerce-apnaBazar

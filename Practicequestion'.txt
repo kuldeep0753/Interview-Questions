@@ -1,0 +1,202 @@
+// const s1={name:"kulde",
+//          age:23}
+// const s2={
+//   name:"deep",
+//   age:34
+// }
+
+// function stu(state,marks){
+//   console.log(`${this.name} ${this.age} ${state} ${marks} `);
+// }
+// stu.call(s1,"UP",54);
+// stu.apply(s1,["UP",54]);
+// stu.bind(s1,"UP",54)();
+------------------------
+<style>
+    .grand{
+      width:500px;
+      height:500px;
+      background: yellow;
+      border:2px solid black;
+    }
+    .parent{
+       width:300px;
+      height:300px;
+      background: green;
+       border:2px solid black;
+    }
+    .child{
+       width:100px;
+      height:100px;
+      background: red;
+       border:2px solid black;
+    }
+  </style>
+
+// document.querySelector(".child").addEventListener("click",function add(e){
+//   console.log("child called");
+// },false)
+// document.querySelector(".parent").addEventListener("click",function add(e){
+//   console.log("parent called");
+//    e.stopPropagation();
+// },false)
+// document.querySelector(".grand").addEventListener("click",function add(e){
+//   console.log("grand called");
+ 
+// },false)
+---
+// document.querySelector(".child").addEventListener("click",function add(e){
+
+//   console.log("child called");
+// },true)
+// document.querySelector(".parent").addEventListener("click",function add(e){
+  
+//   console.log("parent called");
+//   e.stopPropagation();
+// },true)
+// document.querySelector(".grand").addEventListener("click",function add(e){
+//   console.log("grand called");
+// },true)
+
+// ------------------------------
+// Event-delegation
+// document.querySelector(".grand").addEventListener("click",function add(e){
+//   if(e.target.id==="child"){
+//     console.log("child called");
+//   }
+//   else  if(e.target.id==="parent"){
+//     console.log("parent called");
+//   }
+//   else  if(e.target.id==="grand"){
+//     console.log("grand called");
+//   }
+// },false)
+
+---------------------
+// Spread
+// const a=[2,3,4,5];
+// const b=[0,1,...a];
+// console.log(b);
+-----------
+// Rest
+
+// function add(a,b,...c) {
+//   console.log(a,b,c);
+// }
+// add(2,3,4,5,9);
+-------------
+// Destructuring
+// const a=[12,23,43,21];
+// const [p,r,,s]=a;
+// console.log(p,r,s);
+---------------
+// const [f,l]="Kuldeep Singh".split(' ');
+// console.log(f,l);
+-----------------------
+
+//Factorial
+
+function factorial(num) {
+  if (num === 0 || num === 1) {
+    return 1;
+  } else {
+    return num * factorial(num - 1);
+  }
+}
+
+// Example usage:
+const number = 5;
+const result = factorial(number);
+------------------
+----------------
+//Fibonacci
+
+function fibonacci(num) {
+  let a = 0;
+  let b = 1;
+  let sequence = "";
+
+  for (let i = 0; i < num; i++) {
+    sequence += a + ", ";
+    const temp = a + b;
+    a = b;
+    b = temp;
+  }
+
+  return sequence.slice(0, -2); // Remove the trailing comma and space
+}
+
+// Example usage:
+const number = 10;
+const result = fibonacci(number);
+======================
+Prime number
+
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+
+  // Check for divisibility from 2 to the square root of the number
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// Example usage:
+const number = 17;
+const result = isPrime(number);
+====================
+Pallindrome
+
+function isPalindrome(str) {
+  const reversedStr = str.split('').reverse().join('');
+  return str === reversedStr;
+}
+
+// Example usage:
+const word = 'Madam';
+const result = isPalindrome(word);
+console.log(`"${word}" is${result ? '' : ' not'} a palindrome.`);
+============
+Reverse
+
+function reverseWords(str) {
+  const words = str.split(' ');
+  const reversedWords = words.reverse();
+  return reversedWords.join(' ');
+}
+
+// Example usage:
+const sentence = 'Hello, world! How are you?';
+const reversedSentence = reverseWords(sentence);
+console.log(reversedSentence);
+
+======
+remove vowels from words
+
+function removeVowels(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+
+// Example usage:
+const word = 'Hello';
+const result = removeVowels(word);
+console.log(result);
+=====
+Flatten array
+
+function flattenArray(arr) {
+  return arr.reduce(function (flat, toFlatten) {
+    return flat.concat(Array.isArray(toFlatten) ? flattenArray(toFlatten) : toFlatten);
+  }, []);
+}
+
+// Example usage:
+const nestedArray = [1, [2, [3, 4], 5], 6];
+const flattenedArray = flattenArray(nestedArray);
+console.log(flattenedArray);
